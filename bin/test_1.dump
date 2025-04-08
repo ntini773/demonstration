@@ -1,0 +1,19 @@
+
+bin/test_1.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+80000000 <main>:
+80000000:	1101                	addi	sp,sp,-32
+80000002:	ce06                	sw	ra,28(sp)
+80000004:	cc22                	sw	s0,24(sp)
+80000006:	1000                	addi	s0,sp,32
+80000008:	02a00793          	li	a5,42
+8000000c:	fef42623          	sw	a5,-20(s0)
+80000010:	fec42783          	lw	a5,-20(s0)
+80000014:	853e                	mv	a0,a5
+80000016:	40f2                	lw	ra,28(sp)
+80000018:	4462                	lw	s0,24(sp)
+8000001a:	6105                	addi	sp,sp,32
+8000001c:	8082                	ret
