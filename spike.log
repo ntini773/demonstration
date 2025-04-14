@@ -3,8 +3,25 @@ core   0: 0x00001004 (0x02028593) addi    a1, t0, 32
 core   0: 0x00001008 (0xf1402573) csrr    a0, mhartid
 core   0: 0x0000100c (0x0182a283) lw      t0, 24(t0)
 core   0: 0x00001010 (0x00028067) jr      t0
-core   0: 0x80000008 (0xfd010113) addi    sp, sp, -48
-core   0: 0x8000000c (0x02112623) sw      ra, 44(sp)
-core   0: 0x80000010 (0x02812423) sw      s0, 40(sp)
-core   0: 0x80000014 (0x03010413) addi    s0, sp, 48
-core   0: 0x80000018 (0x00500793) li      a5, 5
+core   0: 0x80000000 (0x00007179) c.addi16sp sp, -48
+core   0: 0x80000002 (0x0000d606) c.swsp  ra, 44(sp)
+core   0: 0x80000004 (0x0000d422) c.swsp  s0, 40(sp)
+core   0: 0x80000006 (0x00001800) c.addi4spn s0, sp, 48
+core   0: 0x80000008 (0x00004795) c.li    a5, 5
+core   0: 0x8000000a (0xfef42623) sw      a5, -20(s0)
+core   0: 0x8000000e (0x0000478d) c.li    a5, 3
+core   0: 0x80000010 (0xfef42423) sw      a5, -24(s0)
+core   0: 0x80000014 (0x00004789) c.li    a5, 2
+core   0: 0x80000016 (0xfef42223) sw      a5, -28(s0)
+core   0: 0x8000001a (0xfec42703) lw      a4, -20(s0)
+core   0: 0x8000001e (0xfe842783) lw      a5, -24(s0)
+core   0: 0x80000022 (0x000097ba) c.add   a5, a4
+core   0: 0x80000024 (0xfef42023) sw      a5, -32(s0)
+core   0: 0x80000028 (0xfe042703) lw      a4, -32(s0)
+core   0: 0x8000002c (0xfe442783) lw      a5, -28(s0)
+core   0: 0x80000030 (0x000097ba) c.add   a5, a4
+core   0: 0x80000032 (0xfcf42e23) sw      a5, -36(s0)
+core   0: 0x80000036 (0x800017b7) lui     a5, 0x80001
+core   0: 0x8000003a (0x00004705) c.li    a4, 1
+core   0: 0x8000003c (0x00e7a023) sw      a4, 0(a5)
+core   0: 0x80000040 (0x0000a001) c.j     pc + 0
