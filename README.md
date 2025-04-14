@@ -82,9 +82,9 @@ riscv32-unknown-elf-gcc -march=rv32imc -mabi=ilp32 -nostartfiles -T link.ld -o t
 spike --isa=rv32im -l --log=spike.log test.elf
 ```
 
-![1744620862382](image/README/1744620862382.png)
+![1744620862382](1744620862382.png)
 
-![1744621143475](image/README/1744621143475.png)
+![1744621143475](1744621143475.png)
 
 # 2.Ibex Simple System Simulator Example
 
@@ -146,4 +146,4 @@ Back in the `demonstration/ibex` root directory:
 * `--meminit=ram,<path>` loads the RAM with your compiled program.
 * `--trace` enables waveform tracing output.
 
-![1744646675769](image/README/1744646675769.png)
+![1744646675769](1744646675769.png)
